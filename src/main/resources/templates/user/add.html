@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        <label>Username:</label>
+        <input type="text" name="username" th:value="${enteredUsername}"><br>
+        <label>Email:</label>
+        <input type="email" name="email" th:value="${enteredEmail}"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <label>Confirm Password:</label>
+        <input type="password" name="verify"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div>
+        <p th:if="${error}">Passwords Don't Match</p>
+    </div>
+</body>
+</html>
